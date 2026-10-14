@@ -5,7 +5,7 @@ source "$(dirname "$0")/course-lib.sh"
 cd "$ROOT" || exit 0
 BRANCH="$(git branch --show-current 2>/dev/null)"
 [ "$BRANCH" = "learner/$HANDLE" ] || exit 0
-git add -- "progress/$HANDLE.json" "progress/$HANDLE.sessions.jsonl" "progress/$HANDLE.certificate.md" 2>/dev/null
+for f in "progress/$HANDLE.json" "progress/$HANDLE.sessions.jsonl" "progress/$HANDLE.certificate.md"; do [ -f "$f" ] && git add -- "$f" 2>/dev/null; done
 if ! git diff --cached --quiet 2>/dev/null; then
   git -c user.name="$HANDLE" -c user.email="$HANDLE@course.local" commit -qm "progress: $HANDLE $(date +%F)" >/dev/null 2>&1
 fi

@@ -16,7 +16,7 @@ export COURSE_LESSON_DIR="$LESSON"
 OUT="$("$LESSON/check.sh" 2>&1)"; RC=$?
 echo "$OUT"
 PROG="$ROOT/progress/$COURSE_HANDLE.json"
-if [ -f "$PROG" ] && command -v jq >/dev/null; then
+if [ -z "$COURSE_NO_COUNT" ] && [ -f "$PROG" ] && command -v jq >/dev/null; then
   jq --arg id "$ID" '.lessons[$id] = ((.lessons[$id] // {}) | .attempts = ((.attempts // 0) + 1))' "$PROG" > "$PROG.tmp" && mv "$PROG.tmp" "$PROG"
 fi
 if [ $RC -eq 0 ]; then echo "RESULT: PASS $ID"; else echo "RESULT: FAIL $ID"; fi

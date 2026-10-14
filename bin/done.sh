@@ -5,11 +5,11 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 ID="$(printf '%02d' "$((10#${1:?phase id}))")"; QUIZ="${2:-}"
 H="$(cat "$ROOT/.course/handle" 2>/dev/null)"; [ -n "$H" ] || { echo "Run bin/setup.sh first"; exit 1; }
 PROG="$ROOT/progress/$H.json"; SESS="$ROOT/progress/$H.sessions.jsonl"
-"$ROOT/bin/check.sh" "$ID" || { echo "Not yet: fix the [..] lines above, then run /done again."; exit 1; }
+COURSE_NO_COUNT=1 "$ROOT/bin/check.sh" "$ID" || { echo "Not yet: fix the [..] lines above, then run /done again."; exit 1; }
 if jq -e --arg id "$ID" '.lessons[$id].check_passed == true' "$PROG" >/dev/null; then
   echo "Phase $ID was already passed. Nothing changes."; exit 0; fi
 NOW_ISO="$(date -u +%Y-%m-%dT%H:%M:%SZ)"; NOW="$(date +%s)"
-PREV="$(jq -r '[.lessons[] | select(.check_passed == true) | .completed_at] | max // .started' "$PROG")"
+PREV="$(jq -r '(([.lessons[] | select(.check_passed == true) | .completed_at] | max) // .started)' "$PROG")"
 PREV_EPOCH="$(date -j -u -f "%Y-%m-%dT%H:%M:%SZ" "$PREV" +%s 2>/dev/null || date -j -f "%Y-%m-%d" "$PREV" +%s 2>/dev/null || echo 0)"
 MIN=0
 if [ -s "$SESS" ]; then

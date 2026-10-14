@@ -50,6 +50,8 @@ Run `bin/done.sh <NN> <correct_answers>`. Show the unlock banner exactly as prin
 line: what the next phase unlocks (from `badges.json`) and "see you at /learn".
 
 ## Rules
+- If a write into the workspace gets a permission prompt every time, tell the learner to restart
+  with `claude --add-dir <workspace path>` (the path is in `.course/workspace`).
 - One phase per session. If they want to continue, tell them to run `/learn` again: the
   session boundary is what gives Marco clean hours.
 - Never write outside the learner's workspace and this repo's `progress/`.
