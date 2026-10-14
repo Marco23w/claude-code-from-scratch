@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {"stage": "pre", "question": "When you start `claude` in a folder, what can it read without asking?",
+     "options": ["Nothing, every read needs a yes", "Files in that folder and below", "Your whole Mac", "Only files you paste"],
+     "correct": 1, "explanation": "The folder you start in is Claude's world. Reading inside it is free; writes and commands ask first."},
+    {"stage": "post", "question": "You said yes 'once' to creating a file. Claude wants to edit it again. What happens?",
+     "options": ["It edits silently", "It asks again", "It refuses", "It restarts the session"],
+     "correct": 1, "explanation": "'Once' is one permission. 'Always allow' (for this folder) is what makes it quiet."},
+    {"stage": "post", "question": "After /clear, you ask 'what did we write?'. Claude...",
+     "options": ["Remembers everything", "Remembers the last file only", "Has no idea: the context is empty", "Reads your Slack"],
+     "correct": 2, "explanation": "Context is what was read in this session. /clear empties it. CLAUDE.md (phase 01) is what survives."},
+    {"stage": "post", "question": "What does the course log when you work?",
+     "options": ["Your prompts and files", "Session start/end, phases, check results, minutes", "Screenshots", "Nothing at all"],
+     "correct": 1, "explanation": "Timestamps, phase ids, check results, quiz scores, minutes. Never prompts, transcripts or files. See progress/SCHEMA.md."}
+  ]
+}

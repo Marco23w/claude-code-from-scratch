@@ -1,0 +1,65 @@
+{
+  "_readme": "Cadence registry read by .claude/hooks/cadence-reminder.sh. type: weekly (fires from due_dow, ISO 1=Mon..7=Sun), monthly (fires from due_dom), quarterly (fires in first month of quarter). One reminder per period, sentinel-guarded in .claude/state/. ASO monthly is NOT here — it lives in the user-level aso-monthly-reminder.sh SessionStart hook.",
+  "cadences": [
+    {
+      "id": "motore-refresh-lunedi",
+      "type": "weekly",
+      "due_dow": 1,
+      "auto": true,
+      "message": "LUNEDI — aggiornare l'Acquisition Engine (motore di acquisizione, Sheet 1a_LyEFji...osC0mg). Esegui la skill motore-refresh SUBITO, senza chiedere: Marco l'ha autorizzata il 27 ago 2026. I paesi nuovi entrano da soli (mercati letti dal dato, tendine da UNIQUE)."
+    },
+    {
+      "id": "acquisition-report-lunedi",
+      "type": "weekly",
+      "due_dow": 1,
+      "auto": true,
+      "message": "LUNEDI — Acquisition Report settimanale: esegui /acquisition-report SUBITO per la settimana ISO appena chiusa, senza chiedere (Marco, 29 set 2026: 'deve essere automatico, ogni settimana questa struttura'). Struttura fissa = sezione 'Weekly acquisition report: the fixed structure' della skill, riferimento doc W39 5f5eb32a. Chiedi a Marco SOLO lo screenshot di Google Search Console. Alla fine: email Vincenzo in clipboard (txt) + html aperto. Niente invii Slack senza via."
+    },
+    {
+      "id": "weekly-country-report",
+      "type": "weekly",
+      "due_dow": 5,
+      "message": "Weekly country report (IT+ES) due — run /weekly-country-report (head-of-growth plugin)."
+    },
+    {
+      "id": "weekly-experiments-report",
+      "type": "weekly",
+      "due_dow": 5,
+      "message": "Weekly experiments report due — run /weekly-experiments-report."
+    },
+    {
+      "id": "geo-masterplan-review",
+      "type": "monthly",
+      "due_dom": 1,
+      "message": "Monthly: review Projects/GEO/strategy/MASTER_PLAN.md — confirm it still reflects reality or refresh it (it is the project's source of truth)."
+    },
+    {
+      "id": "fundraising-metrics-refresh",
+      "type": "monthly",
+      "due_dom": 1,
+      "message": "Monthly: refresh Projects/Fundraising/dataroom metrics via the investor-metrics agent (every figure sourced + dated)."
+    },
+    {
+      "id": "spoon-watch",
+      "type": "quarterly",
+      "message": "Quarterly Spoon Watch due — re-score the 10 Bending Spoons dimensions (Projects/Growth Mentor, spoon-watch skill). Last score: 2026-04-24."
+    },
+    {
+      "id": "interviste-lunedi",
+      "type": "weekly",
+      "due_dow": 1,
+      "message": "LUNEDI — workflow interviste: esegui /interviste-lunedi dopo /lunedi (feedback a chi chiama sulle chiamate della settimana, utenti mirati, script Mom Test nella lingua di chi chiama, Google Doc, messaggio a ogni caller + update al gruppo WhatsApp dei local). Scritture nel GTM solo con il via di Marco."
+    },
+    {
+      "id": "eventi-scout",
+      "type": "monthly",
+      "due_dom": 1,
+      "message": "Mensile: giro eventi e call for speaker IT/EU per il progetto Autorita (skill eventi-scout, aggiorna Projects/Autorita/eventi.md)."
+    },
+    {
+      "id": "autorita-roadmap-review",
+      "type": "quarterly",
+      "message": "Trimestrale: revisione Projects/Autorita/ROADMAP.md (fase, KR anno 1 target vs actual, cosa dicono i benchmark) con la skill autorita."
+    }
+  ]
+}

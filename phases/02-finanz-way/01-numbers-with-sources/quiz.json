@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {"stage": "pre", "question": "CPU = Meta spend / new accounts from Mixpanel. The label is...",
+     "options": ["MEASURED", "DERIVED", "ASSUMED", "no data"],
+     "correct": 1, "explanation": "Computed from two measured inputs with a formula you can show: DERIVED."},
+    {"stage": "post", "question": "You can't reach Mixpanel today. The Actual cell should say...",
+     "options": ["Roughly 12%", "no data (needs Mixpanel access to funnel X)", "Same as last week", "On track"],
+     "correct": 1, "explanation": "'no data' plus what is needed. A plausible number becomes a decision downstream."},
+    {"stage": "post", "question": "Why is `last-updated:` in the front matter and not in prose?",
+     "options": ["It looks nicer", "A script can read it and flag stale files", "Markdown requires it", "Claude ignores prose"],
+     "correct": 1, "explanation": "Machine-readable header: a hook compares it with review-interval and nags you (phase 08)."},
+    {"stage": "post", "question": "Claude writes a number you never gave it. First fix?",
+     "options": ["Delete the number", "Add a line under 'Where numbers come from' in CLAUDE.md and retry", "Switch model", "Ask nicer"],
+     "correct": 1, "explanation": "Behaviour comes from context. Fix the standing instruction, not the single answer."}
+  ]
+}

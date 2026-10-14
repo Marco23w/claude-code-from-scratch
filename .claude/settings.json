@@ -1,0 +1,33 @@
+{
+  "hooks": {
+    "SessionStart": [
+      { "matcher": "startup|resume", "hooks": [
+        { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/course-session-start.sh", "timeout": 10 } ] }
+    ],
+    "Stop": [
+      { "hooks": [
+        { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/course-stop.sh", "timeout": 3 } ] }
+    ],
+    "SessionEnd": [
+      { "hooks": [
+        { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/course-session-end.sh", "timeout": 30 } ] }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(bin/check.sh:*)",
+      "Bash(bin/done.sh:*)",
+      "Bash(bin/progress.sh:*)",
+      "Bash(bin/setup.sh:*)",
+      "Bash(bin/certificate.sh:*)",
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(jq:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git diff:*)"
+    ],
+    "additionalDirectories": ["~/Finanz/growth-os"]
+  }
+}

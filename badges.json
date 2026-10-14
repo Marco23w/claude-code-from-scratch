@@ -1,0 +1,22 @@
+{
+  "_readme": "One badge per phase. Unlocked by bin/done.sh when the phase's check passes. XP: 100 per lesson passed, +50 for a perfect quiz. Titles by XP in levels.",
+  "phases": {
+    "00": {"emoji": "🐣", "badge": "Hello Claude",        "unlock": "Your first session, logged. Claude knows your name now."},
+    "01": {"emoji": "🧠", "badge": "Mind Reader",         "unlock": "Claude reads your CLAUDE.md before you type a word."},
+    "02": {"emoji": "🔎", "badge": "Source Hunter",       "unlock": "Every number you show has a source someone can reopen."},
+    "03": {"emoji": "🛠️", "badge": "Toolsmith",           "unlock": "Files in, report out, even with no terminal open (headless)."},
+    "04": {"emoji": "⚡", "badge": "One-Command Wonder",  "unlock": "Your weekly recap is now one slash command."},
+    "05": {"emoji": "🪝", "badge": "Puppet Master",       "unlock": "The harness nags for you. You never forget a deadline again."},
+    "06": {"emoji": "🤖", "badge": "Team Builder",        "unlock": "You have a read-only analyst that works while you sleep."},
+    "07": {"emoji": "🔌", "badge": "Plugged In",          "unlock": "A real KR, read live from a real source, with as-of date."},
+    "08": {"emoji": "🧬", "badge": "Never Forgets",       "unlock": "Memory, cadences, plugins: your OS survives the week."},
+    "09": {"emoji": "🏆", "badge": "Growth OS Owner",     "unlock": "You run your channel on your own Growth OS. Certificate time."}
+  },
+  "levels": [
+    {"min_xp": 0,    "title": "Rookie"},
+    {"min_xp": 300,  "title": "Operator"},
+    {"min_xp": 600,  "title": "Builder"},
+    {"min_xp": 900,  "title": "Architect"},
+    {"min_xp": 1200, "title": "Growth OS Owner"}
+  ]
+}

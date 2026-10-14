@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {"stage": "pre", "question": "Where should 'never send anything on Slack in my name' live?",
+     "options": ["In every prompt", "In CLAUDE.md, under Stop and ask", "In a Slack message to Claude", "Nowhere, Claude knows"],
+     "correct": 1, "explanation": "Standing rules go in CLAUDE.md so they load at every session start."},
+    {"stage": "post", "question": "You have ~/.claude/CLAUDE.md and ~/Finanz/growth-os/CLAUDE.md. Working in growth-os, Claude reads...",
+     "options": ["Only the global one", "Only the project one", "Both, project loaded after global", "The newest one"],
+     "correct": 2, "explanation": "All levels load, most specific last. Global says who you are, project says what this folder is."},
+    {"stage": "post", "question": "Which line belongs in a CLAUDE.md?",
+     "options": ["Be helpful and accurate", "Numbers come from Adjust, cohort d7, never the Meta dashboard", "My API key is sk-...", "Hello Claude!"],
+     "correct": 1, "explanation": "Only lines that change behaviour. Never secrets. Politeness is noise."},
+    {"stage": "post", "question": "What does a line `@glossary.md` do?",
+     "options": ["Creates the file", "Inlines that file into CLAUDE.md at load", "Emails the glossary", "Nothing, it's a comment"],
+     "correct": 1, "explanation": "@ imports pull other files in, so the main CLAUDE.md stays short and readable."}
+  ]
+}

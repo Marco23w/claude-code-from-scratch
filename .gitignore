@@ -1,0 +1,9 @@
+.DS_Store
+# per-learner local state (handle, language, workspace path, pending push flag, LEARNING.md)
+.course/
+# scratch work done during lessons stays on the learner's machine
+work/
+phases/*/*/outputs/out/
+# never commit data exports
+*.csv
+*.xlsx
