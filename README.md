@@ -7,7 +7,7 @@ Code by Claude itself :)
 Italian version: [README.it.md](README.it.md)
 
 ## Start here
-Clone, open Claude Code in the folder, and type **start learning**. That's the whole instruction :)
+Wow, want to become a Claude master before you even start? 😎 Clone, open Claude Code in the folder, type **start learning**. That's the whole instruction :)
 ```
 git clone https://github.com/Marco23w/claude-code-from-scratch.git && cd claude-code-from-scratch && claude
 ```

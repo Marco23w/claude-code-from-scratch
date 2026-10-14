@@ -7,7 +7,7 @@ dentro Claude Code :)
 English version: [README.md](README.md)
 
 ## Parti da qui
-Clona, apri Claude Code nella cartella, e scrivi **start learning**. Tutta l'istruzione e' questa :)
+Wow, vuoi diventare un maestro di Claude prima ancora di iniziare? 😎 Clona, apri Claude Code nella cartella, scrivi **start learning**. Tutta l'istruzione e' questa :)
 ```
 git clone https://github.com/Marco23w/claude-code-from-scratch.git && cd claude-code-from-scratch && claude
 ```

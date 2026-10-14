@@ -5,7 +5,10 @@ INPUT="$(cat)"
 # New learner (no setup yet): tell the tutor to open with the one sentence that starts everything.
 ROOT0="${CLAUDE_PROJECT_DIR:-$(cd "$(dirname "$0")/../.." && pwd)}"
 if [ ! -f "$ROOT0/.course/handle" ]; then
-  echo '<course-welcome>New learner, no setup yet. Whatever they write first, answer in ONE line: "Welcome to Claude Code from Scratch :) Type: start learning" (and in Italian: "Scrivi: start learning"). Then run the start-learning skill as soon as they do. Do nothing else before.</course-welcome>'
+  echo '<course-welcome>New learner, no setup yet. Whatever they write first (or if they write nothing yet), your first reply is EXACTLY these two lines, nothing else:
+Wow, vuoi diventare un maestro di Claude prima ancora di iniziare? 😎 Scrivi: start learning
+Wow, want to become a Claude master before you even start? 😎 Type: start learning
+Then run the start-learning skill as soon as they type it (with or without the slash). Nothing else comes before.</course-welcome>'
   exit 0
 fi
 source "$(dirname "$0")/course-lib.sh"
