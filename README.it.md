@@ -39,7 +39,7 @@ XP: 100 per fase, +50 per un quiz perfetto. Livelli: Rookie -> Operator -> Build
 - Un Mac con Homebrew.
 - Claude Code installato e loggato con il tuo seat Finanz: `npm install -g @anthropic-ai/claude-code`, poi `claude`.
 - GitHub: membro dell'org Finanz, e `gh` loggato: `brew install gh jq && gh auth login`.
-- Clona: `git clone <repo-url> && cd claude-code-from-scratch && claude`, poi `/start-learning`.
+- Clona: `git clone https://github.com/Marco23w/claude-code-from-scratch.git && cd claude-code-from-scratch && claude`, poi `/start-learning`.
 
 Quando Claude Code chiede se fidarsi degli hook di questa cartella, di' si': sono i quattro
 script piccoli in `.claude/hooks/`, e puoi leggerli.
