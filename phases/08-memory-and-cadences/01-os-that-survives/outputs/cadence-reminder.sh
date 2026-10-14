@@ -2,7 +2,7 @@
 # UserPromptSubmit hook — cadence reminders + staleness sentinel.
 # 1) Reads .claude/cadences.json; for each cadence past its due day in the current
 #    period, emits ONE reminder per period (sentinel files in .claude/state/).
-# 2) Once per day, scans Projects/*/STATUS.md (last-updated vs review-interval)
+# 2) Once per day, scans STATUS.md of this workspace (last-updated vs review-interval)
 #    and flags overdue project reviews.
 # Requires jq. Fails silent (exit 0) — never blocks a prompt.
 
@@ -47,7 +47,7 @@ done
 if [ -n "$REMINDERS" ]; then
   echo "<cadence-reminder>"
   printf "%b" "$REMINDERS"
-  echo "Tell Marco these are due; run them only if he confirms (or they are already the task at hand)."
+  echo "Tell the owner these are due; run them only on their go (or if they are already the task at hand)."
   echo "</cadence-reminder>"
 fi
 
@@ -71,7 +71,7 @@ if [ ! -f "$DAILY" ]; then
   if [ -n "$OVERDUE" ]; then
     echo "<staleness-alert>"
     printf "%b" "$OVERDUE"
-    echo "Flag these overdue project reviews to Marco (update STATUS.md or confirm still current)."
+    echo "Flag the stale STATUS.md to the owner (update it or confirm it is still current)."
     echo "</staleness-alert>"
   fi
 fi
