@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mixpanel": {
+      "command": "npx",
+      "args": ["-y", "@mixpanel/mcp-server"],
+      "env": { "MIXPANEL_SERVICE_ACCOUNT": "${MIXPANEL_SERVICE_ACCOUNT}", "MIXPANEL_SECRET": "${MIXPANEL_SECRET}" }
+    },
+    "_note": "Example shape only. Ask the tutor for the exact package of your source. Secrets stay in ${VARS}, set in your shell. For claude.ai connectors (Slack, Notion, Drive) add a placeholder entry with the server name so this file records what your OS depends on."
+  }
+}

@@ -45,13 +45,14 @@ When Claude Code asks whether to trust this folder's hooks, say yes: they are th
 scripts in `.claude/hooks/`, and you can read them.
 
 ## What gets tracked, and what doesn't
-The course logs, on your own branch `learner/<your-handle>`: when a session starts and ends,
-which phases you passed, check results, quiz scores, minutes. It never logs your prompts, your
-transcripts, or your files. Marco reads the branches every Monday to see who needs a hand.
+The course logs, on your own branch `learner/<your-handle>` in a **private** repo
+(`claude-code-from-scratch-progress`, visible to you and Marco only): when a session starts and ends,
+which phases you passed, check results, quiz scores, minutes, and the feedback you send with `/feedback`.
+It never logs your prompts, your transcripts, or your files. Marco reads it every Monday to see who needs a hand.
 Details: `progress/SCHEMA.md`.
 
 ## Commands
-`/start-learning` · `/learn` · `/check-understanding NN` · `/course-guide` · `/done NN` · `/progress`
+`/start-learning` · `/learn` · `/check-understanding NN` · `/course-guide` · `/done NN` · `/progress` · `/feedback`
 
 ## Credits
 Structure inspired by [AI Engineering from Scratch](https://aiengineeringfromscratch.com)

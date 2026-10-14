@@ -20,10 +20,10 @@ printf '%s' "$HANDLE" > .course/handle; printf '%s' "$LANG_" > .course/lang
 printf '%s' "$CHANNEL" > .course/channel; printf '%s' "$NAME" > .course/name; printf '%s' "$WS" > .course/workspace
 echo "Handle: $HANDLE  lang: $LANG_  channel: $CHANNEL  workspace: $WS"
 BR="learner/$HANDLE"
+PROGRESS_URL="https://github.com/Marco23w/claude-code-from-scratch-progress.git"
+git remote get-url progress >/dev/null 2>&1 || git remote add progress "$PROGRESS_URL"
 if git show-ref --verify --quiet "refs/heads/$BR"; then git checkout -q "$BR"; else git checkout -q -b "$BR"; fi
-if git remote get-url origin >/dev/null 2>&1; then
-  git fetch -q origin "$BR" 2>/dev/null && git merge -q --ff-only "origin/$BR" 2>/dev/null || true
-fi
+git fetch -q progress "$BR" 2>/dev/null && git merge -q --ff-only "progress/$BR" 2>/dev/null || true
 if [ ! -d "$WS" ]; then
   mkdir -p "$WS/reports" "$WS/work" "$WS/.claude"
   ( cd "$WS" && git init -q && cp "$ROOT/reference/STATUS_template.md" STATUS.md && printf '.DS_Store\nwork/\n*.csv\n' > .gitignore && git add -A && git -c user.name="$NAME" -c user.email="$HANDLE@course.local" commit -qm "growth-os: start" )
@@ -40,6 +40,6 @@ fi
 printf '{"session_id":"setup-test","source":"startup"}' | CLAUDE_PROJECT_DIR="$ROOT" .claude/hooks/course-session-start.sh >/dev/null
 printf '{"session_id":"setup-test","reason":"other"}' | CLAUDE_PROJECT_DIR="$ROOT" .claude/hooks/course-session-end.sh >/dev/null
 grep -q '"sid":"setup-test"' "progress/$HANDLE.sessions.jsonl" && echo "Hooks: ok" || { echo "Hooks: FAILED"; exit 1; }
-[ -f .course/push_pending ] && echo "Branch $BR committed locally (push will retry at the next session)." || echo "Branch $BR in sync."
+[ -f .course/push_pending ] && echo "Branch $BR committed locally (push to the private progress repo will retry at the next session; ask Marco to add you as collaborator)." || echo "Branch $BR in sync with the private progress repo."
 echo
 echo "Done :) Now run:  claude   and then  /learn"

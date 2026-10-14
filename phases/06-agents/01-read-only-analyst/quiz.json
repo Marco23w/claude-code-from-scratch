@@ -1,1 +1,16 @@
-{"questions":[]}
+{
+  "questions": [
+    {"stage": "pre", "question": "Why give an analyst agent only Read, Grep and Glob?",
+     "options": ["It is faster", "It can look but cannot change anything, so it is safe to run unattended", "Write is expensive", "Agents cannot use Bash"], "correct": 1,
+     "explanation": "A closed, read-only tool list is what makes a second opinion trustworthy."},
+    {"stage": "post", "question": "An agent finishes. What comes back to your session?",
+     "options": ["Its whole conversation", "Only its final message", "A file it wrote", "Nothing"], "correct": 1,
+     "explanation": "Subagents work in their own context; only the final message returns. Your context stays clean."},
+    {"stage": "post", "question": "In the thesis frame, what is the extra component for?",
+     "options": ["Speed", "Checking that the other components hand over the right things", "Writing the report", "Sending Slack"], "correct": 1,
+     "explanation": "Goal -> tasks -> one component each -> one that checks the hand-offs. The analyst is that checker."},
+    {"stage": "post", "question": "Your analyst edited STATUS.md. What went wrong?",
+     "options": ["The model is too smart", "The tools line includes Edit or Write", "It is normal", "The file was unlocked"], "correct": 1,
+     "explanation": "Agents can only use the tools listed. If it edited, the list allowed it."}
+  ]
+}

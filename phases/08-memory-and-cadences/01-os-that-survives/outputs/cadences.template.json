@@ -1,0 +1,7 @@
+{
+  "_readme": "Read by .claude/hooks/cadence-reminder.sh. type: weekly (fires from due_dow, ISO 1=Mon..7=Sun), monthly (from due_dom). One reminder per period, sentinel in .claude/state/.",
+  "cadences": [
+    { "id": "weekly-recap", "type": "weekly", "due_dow": 1, "message": "MONDAY: run /<channel>-weekly and update STATUS.md (last-updated = today)." },
+    { "id": "status-review", "type": "monthly", "due_dom": 1, "message": "Monthly: reread STATUS.md targets. Still the right KRs? Update or confirm." }
+  ]
+}

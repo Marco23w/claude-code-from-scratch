@@ -1,1 +1,16 @@
-{"questions":[]}
+{
+  "questions": [
+    {"stage": "pre", "question": "What proves 'the week' in the capstone?",
+     "options": ["A screenshot", "Commits on at least 4 distinct days in the workspace repo", "A Slack message", "The certificate"], "correct": 1,
+     "explanation": "git log is the evidence. Four days of commits means the OS was used, not just built."},
+    {"stage": "post", "question": "The agent in your OS must be...",
+     "options": ["Fast", "Read-only, producing Verdict and Weakest assumption", "Able to write STATUS", "Opus"], "correct": 1,
+     "explanation": "Closed tool list and a verdict. Decisions stay with you."},
+    {"stage": "post", "question": "Who flips the certificate from pending to signed?",
+     "options": ["bin/done.sh", "You", "Marco, from his Monday skill, after the 15-minute demo", "GitHub"], "correct": 2,
+     "explanation": "done.sh writes 'pending'. Marco's review sets passed or redo."},
+    {"stage": "post", "question": "The sentence Marco wants to read in STATUS 'This week' is...",
+     "options": ["We worked hard", "A decision on a number with its source", "The OS is done", "See Slack"], "correct": 1,
+     "explanation": "A decision taken on a sourced number from the OS is the proof the system is used for real."}
+  ]
+}

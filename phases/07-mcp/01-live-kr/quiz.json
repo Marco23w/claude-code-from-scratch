@@ -1,1 +1,16 @@
-{"questions":[]}
+{
+  "questions": [
+    {"stage": "pre", "question": "Where does a Mixpanel secret go when you configure an MCP server?",
+     "options": ["In .mcp.json as a string", "In an environment variable, referenced as ${VAR}", "In CLAUDE.md", "In the README"], "correct": 1,
+     "explanation": "Never a literal token in a file in a repo. ${VAR} expands from your shell."},
+    {"stage": "post", "question": "A KR read through MCP goes into STATUS.md with Source...",
+     "options": ["'Mixpanel'", "mcp:<server> plus the query, and an as-of date", "'live'", "No source needed, it is automatic"], "correct": 1,
+     "explanation": "The query is the source. mcp:<server> + query + date lets anyone rerun it."},
+    {"stage": "post", "question": "Which scope shares an MCP server with whoever clones your workspace?",
+     "options": ["User scope", "Project scope (.mcp.json)", "claude.ai connector", "None"], "correct": 1,
+     "explanation": ".mcp.json in the folder is project scope: shared. User scope is yours everywhere."},
+    {"stage": "post", "question": "Read-only posture means...",
+     "options": ["Claude cannot read", "Only reading tools until a write gets an explicit go", "MCP is disabled", "Only Marco can use MCP"], "correct": 1,
+     "explanation": "Reads are free; writes to Meta, Slack, Supabase wait for a go, one at a time."}
+  ]
+}

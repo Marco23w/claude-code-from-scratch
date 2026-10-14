@@ -45,13 +45,14 @@ Quando Claude Code chiede se fidarsi degli hook di questa cartella, di' si': son
 script piccoli in `.claude/hooks/`, e puoi leggerli.
 
 ## Cosa viene tracciato, e cosa no
-Il corso registra, sul tuo branch `learner/<tuo-handle>`: quando una sessione inizia e finisce,
-quali fasi hai passato, esiti dei check, punteggi dei quiz, minuti. Mai i tuoi prompt, le
-trascrizioni o i tuoi file. Marco legge i branch ogni lunedi' per vedere a chi serve una mano.
+Il corso registra, sul tuo branch `learner/<tuo-handle>` in un repo **privato**
+(`claude-code-from-scratch-progress`, lo vedete solo tu e Marco): quando una sessione inizia e finisce,
+quali fasi hai passato, esiti dei check, punteggi dei quiz, minuti, e i feedback che mandi con `/feedback`.
+Mai i tuoi prompt, le trascrizioni o i tuoi file. Marco lo legge ogni lunedi' per vedere a chi serve una mano.
 Dettagli: `progress/SCHEMA.md`.
 
 ## Comandi
-`/start-learning` · `/learn` · `/check-understanding NN` · `/course-guide` · `/done NN` · `/progress`
+`/start-learning` · `/learn` · `/check-understanding NN` · `/course-guide` · `/done NN` · `/progress` · `/feedback`
 
 ## Crediti
 Struttura ispirata a [AI Engineering from Scratch](https://aiengineeringfromscratch.com)

@@ -1,6 +1,7 @@
 # progress/<handle>.json
 
-One file per learner, committed only on the learner's own branch `learner/<handle>`.
+One file per learner, committed only on the learner's own branch `learner/<handle>`, which is pushed to the
+PRIVATE repo `Marco23w/claude-code-from-scratch-progress` (remote `progress`). The public course repo never holds progress.
 
 | Field | Type | Meaning |
 |---|---|---|
@@ -15,6 +16,10 @@ One file per learner, committed only on the learner's own branch `learner/<handl
 | `badges` | array | Badge keys unlocked, in order (see `badges.json`). |
 | `lessons.<phase>` | object | `completed_at` (ISO), `check_passed` (bool), `attempts` (int, number of check runs), `minutes` (int, DERIVED: session minutes between the previous completion and this one), `quiz` (int, correct answers on the post quiz). |
 | `capstone_review` | null or object | Set by `bin/done.sh 09` to `{"status":"pending"}`; flipped to `passed` or `redo` by Marco from `/corso-team`. |
+
+# progress/<handle>.feedback.jsonl
+
+One JSON line per feedback sent with `/feedback`: `at`, `phase` (`00`..`09` or `general`), `text` (the learner's words), `status` (`new`, then `seen` or `done` set by Marco from `/corso-team`).
 
 # progress/<handle>.sessions.jsonl
 

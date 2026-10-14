@@ -46,6 +46,8 @@ Ask the `stage: post` questions from `quiz.json`, one at a time, options a-d. Co
 answers. For wrong ones, give the `explanation` field. No shame, no drama.
 
 ## Step 5: done
+Before marking done, ask once: "Anything unclear in this phase? One line and I log it with /feedback."
+If they answer with something, run `bin/feedback.sh <NN> "<their words>"`. Then:
 Run `bin/done.sh <NN> <correct_answers>`. Show the unlock banner exactly as printed. Then one
 line: what the next phase unlocks (from `badges.json`) and "see you at /learn".
 

@@ -1,1 +1,16 @@
-{"questions":[]}
+{
+  "questions": [
+    {"stage": "pre", "question": "MEMORY.md should contain...",
+     "options": ["All the notes, in full", "One line per note, linking to the file", "Only Marco's rules", "Nothing, it is automatic"], "correct": 1,
+     "explanation": "MEMORY.md is an index. Content lives in one-fact files. Keeps the context light."},
+    {"stage": "post", "question": "A weekly cadence with due_dow 1 fires...",
+     "options": ["Every prompt on Monday", "Once per week, from Monday on, thanks to a sentinel file", "Every day", "Only if you ask"], "correct": 1,
+     "explanation": "The hook checks the sentinel for this ISO week; fires once, then touches the sentinel."},
+    {"stage": "post", "question": "Where does an installed plugin live?",
+     "options": ["In CLAUDE.md", "Under ~/.claude/plugins/", "In the workspace .claude/skills", "On GitHub only"], "correct": 1,
+     "explanation": "Marketplace repos are cloned under ~/.claude/plugins; installed plugins are enabled in settings."},
+    {"stage": "post", "question": "STATUS.md is 10 days old with review-interval 7d. What tells you?",
+     "options": ["Nothing, you must remember", "The staleness block of the cadence hook, once a day", "GitHub", "The analyst agent"], "correct": 1,
+     "explanation": "Machine-readable header + a daily hook = you get nagged. That is the state layer working."}
+  ]
+}

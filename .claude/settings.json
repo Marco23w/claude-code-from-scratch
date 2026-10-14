@@ -20,6 +20,7 @@
       "Bash(bin/progress.sh:*)",
       "Bash(bin/setup.sh:*)",
       "Bash(bin/certificate.sh:*)",
+      "Bash(bin/feedback.sh:*)",
       "Bash(cat:*)",
       "Bash(ls:*)",
       "Bash(jq:*)",

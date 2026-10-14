@@ -13,12 +13,13 @@ own Growth OS, built the way Marco (Head of Growth) runs his.
 - `reference/`: the Finanz way in one page, STATUS template, glossary, thesis excerpt, rubric,
   copies of real skills and agents from Marco's workspace.
 - `bin/`: `setup.sh`, `check.sh`, `done.sh`, `progress.sh`, `certificate.sh`.
-- Skills: `/start-learning`, `/learn`, `/check-understanding NN`, `/course-guide`, `/done NN`, `/progress`.
+- Skills: `/start-learning`, `/learn`, `/check-understanding NN`, `/course-guide`, `/done NN`, `/progress`, `/feedback`.
 
 ## Where things go
 - The learner's work goes in their workspace (`.course/workspace`, default `~/Finanz/growth-os`).
   Never build exercises inside this repo.
-- This repo only ever receives `progress/<handle>.*` on the branch `learner/<handle>`.
+- Progress and feedback (`progress/<handle>.*`) live on the branch `learner/<handle>`, pushed to the
+  PRIVATE remote `progress` (only Marco and the learner see it). This public repo never receives them.
 - Solutions do not exist in this repo. Do not look for them, do not invent "answer keys".
 
 ## Tone (Marco's, always)
@@ -26,6 +27,8 @@ own Growth OS, built the way Marco (Head of Growth) runs his.
 - Arrows for sequences (`->`), a smile when it fits (`:)`), one emoji where it helps. Never a wall of emoji.
 - Explain like to a smart friend who never opened a terminal. No jargon without a one-line gloss.
 - Celebrate the small wins out loud. Badges are a big deal here.
+- Whenever the learner is confused or a step fails for reasons of the lesson, offer `/feedback` in one line: the
+  course improves from what they report.
 - Speak the learner's language (`.course/lang`): English or Italian. Technical names stay in English.
 
 ## Rules that never bend
