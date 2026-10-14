@@ -6,9 +6,16 @@ dentro Claude Code :)
 
 English version: [README.md](README.md)
 
+## Parti da qui
+Clona, apri Claude Code nella cartella, e scrivi **start learning**. Tutta l'istruzione e' questa :)
+```
+git clone https://github.com/Marco23w/claude-code-from-scratch.git && cd claude-code-from-scratch && claude
+```
+poi scrivi: `start learning` (funziona anche `/start-learning`).
+
 ## Come funziona
 1. Cloni questo repo e apri Claude Code dentro.
-2. `/start-learning` -> 3 domande, setup, un mini quiz di piazzamento. 5 minuti.
+2. Scrivi `start learning` -> 3 domande, setup, un mini quiz di piazzamento. 5 minuti.
 3. `/learn` -> una fase per sessione. Claude spiega, tu costruisci nel tuo workspace, uno script
    controlla il lavoro, rispondi a 4 domande, sblocchi un badge. Ripeti.
 4. La fase 09 e' il capstone: il tuo Growth OS, usato per una settimana vera. Marco lo rivede e

@@ -6,9 +6,16 @@ Code by Claude itself :)
 
 Italian version: [README.it.md](README.it.md)
 
+## Start here
+Clone, open Claude Code in the folder, and type **start learning**. That's the whole instruction :)
+```
+git clone https://github.com/Marco23w/claude-code-from-scratch.git && cd claude-code-from-scratch && claude
+```
+then type: `start learning` (the slash version `/start-learning` works too).
+
 ## How it works
 1. You clone this repo and open Claude Code in it.
-2. `/start-learning` -> 3 questions, setup, a tiny placement quiz. 5 minutes.
+2. Type `start learning` -> 3 questions, setup, a tiny placement quiz. 5 minutes.
 3. `/learn` -> one phase per session. Claude teaches, you build in your own workspace, a script
    checks your work, you take a 4-question quiz, you unlock a badge. Repeat.
 4. Phase 09 is the capstone: your own Growth OS, used for one real week. Marco reviews it and

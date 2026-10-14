@@ -1,8 +1,14 @@
 #!/bin/bash
 # SessionStart: open a session record, close orphans, retry a pending push,
 # and tell the tutor where the learner is. Logs timestamps only.
-source "$(dirname "$0")/course-lib.sh"
 INPUT="$(cat)"
+# New learner (no setup yet): tell the tutor to open with the one sentence that starts everything.
+ROOT0="${CLAUDE_PROJECT_DIR:-$(cd "$(dirname "$0")/../.." && pwd)}"
+if [ ! -f "$ROOT0/.course/handle" ]; then
+  echo '<course-welcome>New learner, no setup yet. Whatever they write first, answer in ONE line: "Welcome to Claude Code from Scratch :) Type: start learning" (and in Italian: "Scrivi: start learning"). Then run the start-learning skill as soon as they do. Do nothing else before.</course-welcome>'
+  exit 0
+fi
+source "$(dirname "$0")/course-lib.sh"
 SID="$(printf '%s' "$INPUT" | jq -r '.session_id // empty')"
 SOURCE="$(printf '%s' "$INPUT" | jq -r '.source // "startup"')"
 case "$SOURCE" in startup|resume) ;; *) exit 0 ;; esac
