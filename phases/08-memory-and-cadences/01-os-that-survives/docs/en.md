@@ -63,8 +63,8 @@ Restart, type anything: on the due day you see `<cadence-reminder>` with your jo
 silence. Sentinel.
 
 ### Step 3: install Marco's plugin
-In `claude`: `/plugin marketplace add` with the path or URL the tutor gives you for the
-head-of-growth marketplace, then `/plugin install head-of-growth`. Run `/weekly-experiments-report`
+In `claude`: `/plugin marketplace add Marco23w/head-of-growth-marketplace` (private repo, you are a
+collaborator), then `/plugin install head-of-growth@head-of-growth-local`. Run `/weekly-experiments-report`
 once and see what a mature skill looks like. Then look at `~/.claude/plugins/`: that's where it lives.
 
 ### Step 4: stale check

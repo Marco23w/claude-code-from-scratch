@@ -9,5 +9,5 @@ M="$COURSE_WS/memory/MEMORY.md"
 need_file "$M" "memory/MEMORY.md exists"
 LINK="$(grep -Eo '\]\(([^)]+\.md)\)' "$M" | head -1 | sed -E 's/\]\((.*)\)/\1/')"
 [ -n "$LINK" ] && [ -f "$COURSE_WS/memory/$LINK" ] && pass "MEMORY.md links to an existing note ($LINK)" || fail "MEMORY.md links to an existing note in memory/"
-ls -d "$HOME"/.claude/plugins/*/head-of-growth* "$HOME"/.claude/plugins/*/*/head-of-growth* >/dev/null 2>&1 && pass "head-of-growth plugin installed" || fail "head-of-growth plugin installed (ask the tutor for the marketplace command)"
+ls -d "$HOME"/.claude/plugins/*/head-of-growth* "$HOME"/.claude/plugins/*/*/head-of-growth* "$HOME"/.claude/plugins/*/*/*/head-of-growth* >/dev/null 2>&1 && pass "head-of-growth plugin installed" || fail "head-of-growth plugin installed (ask the tutor for the marketplace command)"
 finish

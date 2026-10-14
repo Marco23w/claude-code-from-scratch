@@ -63,8 +63,8 @@ rendilo eseguibile, cablalo in settings.json come hook UserPromptSubmit (l'hai f
 lavoro. Scrivi di nuovo: silenzio. Sentinella.
 
 ### Passo 3: installa il plugin di Marco
-In `claude`: `/plugin marketplace add` con il percorso o l'URL che il tutor ti da' per il
-marketplace head-of-growth, poi `/plugin install head-of-growth`. Lancia
+In `claude`: `/plugin marketplace add Marco23w/head-of-growth-marketplace` (repo privato, sei
+collaborator), poi `/plugin install head-of-growth@head-of-growth-local`. Lancia
 `/weekly-experiments-report` una volta e guarda com'e' fatta una skill matura. Poi guarda
 `~/.claude/plugins/`: e' li' che vive.
 
