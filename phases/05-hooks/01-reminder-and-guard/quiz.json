@@ -1,1 +1,16 @@
-{"questions":[]}
+{
+  "questions": [
+    {"stage": "pre", "question": "You want a reminder to appear every time you send a prompt. Which event?",
+     "options": ["SessionEnd", "UserPromptSubmit", "PostToolUse", "Stop"], "correct": 1,
+     "explanation": "UserPromptSubmit fires on every prompt and its stdout becomes context for Claude."},
+    {"stage": "post", "question": "A guard hook must block a command. It exits with...",
+     "options": ["0", "1", "2", "255"], "correct": 2,
+     "explanation": "Exit 2 blocks and shows stderr to Claude. Exit 1 is a non-blocking error: the command would still run."},
+    {"stage": "post", "question": "Why write the hook path as \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/x.sh?",
+     "options": ["It is shorter", "It works on any machine that clones the folder", "Hooks require it", "It is faster"], "correct": 1,
+     "explanation": "The variable is the folder you opened Claude in. Absolute paths break for teammates."},
+    {"stage": "post", "question": "A hook should fire once a day. The pattern is...",
+     "options": ["A sleep of 24 hours", "A sentinel file named with today's date, checked first", "A cron job", "Asking Claude to remember"], "correct": 1,
+     "explanation": "Sentinel: touch a dated file after firing, skip if it exists. Marco's cadence-reminder.sh does exactly this."}
+  ]
+}

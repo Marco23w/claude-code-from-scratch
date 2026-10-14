@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": ["Read", "Glob", "Grep", "Bash(ls:*)", "Bash(cat:*)", "Bash(git status:*)", "Bash(git log:*)"],
+    "deny": ["Bash(rm:*)"],
+    "ask": ["Write", "Edit"]
+  }
+}

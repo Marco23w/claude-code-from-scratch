@@ -1,1 +1,16 @@
-{"questions":[]}
+{
+  "questions": [
+    {"stage": "pre", "question": "Claude wants to run `ls`. Which tool is that?",
+     "options": ["Read", "Glob", "Bash", "Edit"], "correct": 2,
+     "explanation": "Any shell command goes through Bash. ls, python, git: all Bash, all subject to the Bash permission."},
+    {"stage": "post", "question": "You put `Bash(rm:*)` under `deny`. What happens when Claude tries to delete a file?",
+     "options": ["It asks you", "It deletes silently", "It is blocked, every time", "It deletes but warns"], "correct": 2,
+     "explanation": "deny wins over everything. It is the right place for the things you never want, even by mistake."},
+    {"stage": "post", "question": "Answers get vague in a long session. Best first move?",
+     "options": ["/clear", "/compact", "Restart the Mac", "Type louder"], "correct": 1,
+     "explanation": "/compact summarises the context and keeps the thread. /clear wipes it: use it when you change topic."},
+    {"stage": "post", "question": "`claude -p \"...\"` is useful because...",
+     "options": ["It is faster at typing", "It runs one prompt with no session, so scripts and schedules can call it", "It skips CLAUDE.md", "It uses a bigger model"], "correct": 1,
+     "explanation": "Headless mode is how automation uses Claude. It still reads CLAUDE.md and respects permissions."}
+  ]
+}

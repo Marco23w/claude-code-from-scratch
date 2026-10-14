@@ -1,1 +1,16 @@
-{"questions":[]}
+{
+  "questions": [
+    {"stage": "pre", "question": "What makes Claude pick your skill when you type 'can you do the weekly?'",
+     "options": ["The folder name", "The description in the frontmatter", "A keyboard shortcut", "Luck"], "correct": 1,
+     "explanation": "The description is the trigger. It must contain the phrases you actually use."},
+    {"stage": "post", "question": "The `name:` field must be...",
+     "options": ["Anything you like", "Equal to the folder name", "In Italian", "Unique on GitHub"], "correct": 1,
+     "explanation": "name = folder name, or the skill does not load as /name."},
+    {"stage": "post", "question": "Your SKILL.md is 400 lines. Best move?",
+     "options": ["Leave it", "Move templates and examples to references/ and point to them", "Split into two skills with the same name", "Delete the steps"], "correct": 1,
+     "explanation": "Progressive disclosure: short procedure, long references loaded only when the skill runs."},
+    {"stage": "post", "question": "The weekly report came out wrong. Where do you fix it?",
+     "options": ["In the report, by hand", "In the skill, then run it again", "In CLAUDE.md global", "Nowhere, retry"], "correct": 1,
+     "explanation": "Fix the procedure once and every future run is right. Fixing the output fixes one Monday."}
+  ]
+}
